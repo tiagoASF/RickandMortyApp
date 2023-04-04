@@ -54,7 +54,12 @@ function ListarPersonagens({list}) {
     return (
         <div className="cards">
             {list.map(personagem => (
-                <section className="card" key={personagem.id}>
+                <section 
+                    className="card"
+                    key={personagem.id}
+                    onClick={() => selecionaPersonagem(personagem)}
+                        
+                >
                     <figure className="char-image">
                         <img src={personagem.image}/>
                     </figure>
